@@ -28,7 +28,7 @@ function List({ todos, setTodos }) {
 
   return (
     <div className="list-box">
-      <h2 className="list-title">Working.. 🔥</h2>
+      <h2 className="list-title">Working.. 🌈</h2>
       <div className="todo-contents">
         {todos.map((todo) => {
           if (!todo.isDone) {
@@ -46,7 +46,7 @@ function List({ todos, setTodos }) {
           }
         })}
       </div>
-      <h2 className="list-title">Done..! 🎉</h2>
+      <h2 className="list-title">Done..<span style={{ color: "green" }}>✔</span></h2>
       <div className="todo-contents">
         {todos.map((todo) => {
           if (todo.isDone) {
