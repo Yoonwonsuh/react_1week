@@ -1,0 +1,13 @@
+.layout{
+  display: block;
+  border: 2px solid;
+  border-color: #d2d2d2;
+  border-radius: 10px;
+  background: white;
+  margin: 40px auto;
+  font-family: 'Noto Sans KR';
+  max-width: 1200px;
+  max-height: 1800px;
+  min-height: 800px;
+  padding: 0 20px;
+}

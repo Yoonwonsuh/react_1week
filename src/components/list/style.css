@@ -1,0 +1,12 @@
+.list-box {
+  padding: 24px;
+  gap: 24px;
+}
+
+.list-title{
+  display: block;
+}
+.todo-contents{
+  display: flex;
+  gap: 12px;
+}

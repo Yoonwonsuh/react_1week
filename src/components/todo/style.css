@@ -1,0 +1,41 @@
+
+.todo-box {
+  border: 2px solid #E782FF;
+  border-radius: 12px;
+  padding: 12px 24px 24px;
+  width: 270px;
+}
+
+.button-set {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.clear-button {
+  border: none;
+  background: #6FFFC4;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 40px;
+  width: 50%;
+}
+.clear-button:hover{
+  background: #47FF9C;
+}
+
+.done-button {
+  border-radius: 8px;
+  border:none;
+  background: #E782FF;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  width: 50%;
+}
+.done-button:hover{
+  background: #BF5AD8;
+}

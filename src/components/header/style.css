@@ -1,0 +1,16 @@
+.header-nav {
+  margin-top: 20px;
+  display: flex;
+  border: 2px solid;
+  border-color: #E782FF;
+  border-radius: 20px;
+  background: white;
+  padding: 30px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.font-label{
+  font-weight:bold;
+  font-size: 20px;
+}

@@ -1,0 +1,47 @@
+.gray-nav {
+  margin-top: 20px;
+  display: flex;
+  border: 2px solid;
+  border-color: #E782FF;
+  border-radius: 20px;
+  background: white;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+.input-group {
+  border: none;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.font-label{
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.button-add {
+  border: none;
+  background: #6FFFC4;
+  color: white;
+  align-items: center;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+}
+.button-add:hover{
+  background: #47FF9C;
+  font-weight: bold;
+}
+
+
+input {
+  border: 2px solid;
+  border-color: #6FFFC4;
+  border-radius: 20px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
