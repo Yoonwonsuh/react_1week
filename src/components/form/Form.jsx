@@ -16,9 +16,21 @@ function Form({ setTodos, todos }) {
   };
 
   const onSubmitHandler = (event) => {
-    event.preventDefault();
-    setTodos([...todos, todo]);
-    setTodo(initialState);
+    console.log(todo);
+
+    if (todo.title === '') {
+      alert('제목을 입력하세요!!!!');
+    }
+    else if(todo.body===''){
+      alert('내용을 입력하세요!!!');
+    }
+    else {
+      event.preventDefault();
+      setTodos([...todos, todo]);
+      setTodo(initialState);
+    }
+
+
   };
 
   return (
