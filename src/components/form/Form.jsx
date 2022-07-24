@@ -19,11 +19,15 @@ function Form({ setTodos, todos }) {
     console.log(todo);
 
     if (todo.title === '') {
+      event.preventDefault();
       alert('제목을 입력하세요!!!!');
     }
+
     else if(todo.body===''){
+      event.preventDefault();
       alert('내용을 입력하세요!!!');
     }
+
     else {
       event.preventDefault();
       setTodos([...todos, todo]);
