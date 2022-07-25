@@ -10,8 +10,8 @@ function Form({ setTodos, todos }) {
   };
 
   const [todo, setTodo] = useState(initialState);
-  const onChangeHandler = (event) => {
-    const { name, value } = event.target;
+  const onChangeHandler = (e) => {
+    const { name, value } = e.target;
     setTodo({ ...todo, [name]: value, id: todos.length + 1 });
   };
 

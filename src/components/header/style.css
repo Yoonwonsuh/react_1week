@@ -14,3 +14,64 @@
   font-weight:bold;
   font-size: 20px;
 }
+
+a:link { 
+  text-decoration-line: none;
+ }
+  
+a:visited { 
+  text-decoration: none;
+ }
+  
+a:hover {
+  
+ }
+
+ .unicorn{
+  font-size: 40px;
+  cursor: pointer;
+ }
+
+ .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.modalunicorn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-left: -200px;
+  margin-top: -200px;
+  text-align: center;
+  font-size: 280px;
+  animation: start 5s;
+}
+
+
+
+
+@keyframes start {
+  from {
+      left: -100px;
+  }
+  to {  
+      left: 650px;
+  }
+
+  100% {
+
+      transform: rotate(360deg);
+  }
+  
+  
+}
