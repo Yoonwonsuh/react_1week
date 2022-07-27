@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./style.css";
 
 function Form({ setTodos, todos }) {
+  const inputRef = useRef();
+  useEffect(() =>{
+    inputRef.current.focus();
+  },[]);
+
   const initialState = {
     id: 0,
     title: "",
@@ -42,9 +47,11 @@ function Form({ setTodos, todos }) {
       <div className="input-group">
         <label className="font-label">제목</label>
         <input
+          ref={inputRef}
           type="text"
           name="title"
           value={todo.title}
+          placeholder="제목을 입력하세요!"
           onChange={onChangeHandler}
         />
         <label className="font-label">내용</label>
@@ -52,6 +59,7 @@ function Form({ setTodos, todos }) {
           type="text"
           name="body"
           value={todo.body}
+          placeholder="내용을 입력하세요!"
           onChange={onChangeHandler}
         />
       </div>

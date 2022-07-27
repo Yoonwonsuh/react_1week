@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { useEffect } from "react";
 import Modal from 'react-bootstrap/Modal';
 import "./style.css";
 
@@ -9,16 +8,6 @@ function Header() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  let [fade, setFade] = useState('');
-
-  useEffect(()=>{
-      let a = setTimeout(()=>{setFade('end')},10)
-
-    return()=>{
-      clearTimeout(a)
-      setFade('')
-    }
-  },[]);
 
   return (
     <div className="header-nav">
