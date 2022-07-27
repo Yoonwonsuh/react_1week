@@ -1,9 +1,11 @@
 
 .todo-box {
+  display: block;
   border: 2px solid #E782FF;
   border-radius: 12px;
   padding: 12px 24px 24px;
-  width: 270px;
+  max-width: 270px;
+  min-width: 270px;
 }
 
 .button-set {

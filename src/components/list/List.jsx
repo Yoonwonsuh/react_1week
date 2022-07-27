@@ -30,21 +30,23 @@ function List({ todos, setTodos }) {
     <div className="list-box">
       <h2 className="list-title">Working.. 🌈</h2>
       <div className="todo-contents">
-        {todos.map((todo) => {
-          if (!todo.isDone) {
-            return (
-              <Todo
-                todo={todo}
-                key={todo.id}
-                setTodos={setTodos}
-                onDeleteHanlder={onDeleteHanlder}
-                onEditHandler={onEditHandler}
-              />
-            );
-          } else {
-            return null;
-          }
-        })}
+        <>
+          {todos.map((todo) => {
+            if (!todo.isDone) {
+              return (
+                <Todo
+                  todo={todo}
+                  key={todo.id}
+                  setTodos={setTodos}
+                  onDeleteHanlder={onDeleteHanlder}
+                  onEditHandler={onEditHandler}
+                />
+              );
+            } else {
+              return null;
+            }
+          })}
+        </>
       </div>
       <h2 className="list-title">Done..<span style={{ color: "green" }}>✔</span></h2>
       <div className="todo-contents">
