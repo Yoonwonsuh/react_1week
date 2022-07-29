@@ -2,6 +2,8 @@ import React from "react";
 import "./style.css";
 
 function Todo({ todo, onDeleteHanlder, onEditHandler }) {
+
+
   return (
     <div className="todo-box">
       <div>

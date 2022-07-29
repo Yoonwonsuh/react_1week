@@ -41,6 +41,7 @@ function Form({ setTodos, todos }) {
 
 
   };
+  console.log(todo);
 
   return (
     <form onSubmit={onSubmitHandler} className="gray-nav">

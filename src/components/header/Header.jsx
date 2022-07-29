@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import Modal from 'react-bootstrap/Modal';
+import {useNavigate} from "react-router-dom";
 import "./style.css";
 
 function Header() {
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -15,7 +17,7 @@ function Header() {
       <Modal show={show} onHide={handleClose}>
       <div className="modalunicorn"><span className='start'>🦄</span></div>
       </Modal>
-      <div className="font-label">React</div>
+      <div onClick={()=>{navigate('/detail')}} className="font-label">React</div>
     </div>
     
   );

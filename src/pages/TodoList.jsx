@@ -19,6 +19,7 @@ const TodoList = () => {
       isDone: true,
     },
   ]);
+  console.log(todos);
 
   return (
     <Layout>
