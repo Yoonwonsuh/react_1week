@@ -1,30 +1,18 @@
 import React from "react";
-import Todo from "../todo/todo";
 import "./style.css";
+import { useSelector, useDispatch } from "react-redux"
+import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { onDeleteHanlder, onEditHandler } from "../../redux/modules/Todo"
 
-function List({ todos, setTodos }) {
-  const onDeleteHanlder = (todoId) => {
-    const newTodos = todos.filter((todo) => {
-      return todo.id !== todoId;
-    });
 
-    setTodos(newTodos);
-  };
 
-  const onEditHandler = (todoId) => {
-    const newTodos = todos.map((todo) => {
-      if (todo.id === todoId) {
-        return {
-          ...todo,
-          isDone: !todo.isDone,
-        };
-      } else {
-        return { ...todo };
-      }
-    });
+function List() {
 
-    setTodos(newTodos);
-  };
+  let todos = useSelector((state) => state.todos)
+  console.log(todos)
+  let navigate = useNavigate();
+  let dispatch = useDispatch()
 
   return (
     <div className="list-box">
@@ -34,13 +22,30 @@ function List({ todos, setTodos }) {
           {todos.map((todo) => {
             if (!todo.isDone) {
               return (
-                <Todo
-                  todo={todo}
-                  key={todo.id}
-                  setTodos={setTodos}
-                  onDeleteHanlder={onDeleteHanlder}
-                  onEditHandler={onEditHandler}
-                />
+                <div className="todo-box" key={todo.id}>
+                  <div>
+                    <div className="linkbox">
+                      <div className="gage"></div>
+                      <h3 className="detail-link" onClick={()=>{navigate(`/detail/${todo.id}`)}} key={todo.id}>상세보기 &rarr;</h3>
+                    </div>
+                    <h2>{todo.title}</h2>
+                    <div>{todo.body}</div>
+                  </div>
+                  <div className="button-set">
+                    <button
+                      className="clear-button"
+                      onClick={() => { dispatch(onDeleteHanlder(todo.id)) }}
+                    >
+                      삭제하기
+                    </button>
+                    <button
+                      className="done-button"
+                      onClick={() => { dispatch(onEditHandler(todo.id)) }}
+                    >
+                      {todo.isDone ? "취소" : "완료"}
+                    </button>
+                  </div>
+                </div>
               );
             } else {
               return null;
@@ -53,13 +58,30 @@ function List({ todos, setTodos }) {
         {todos.map((todo) => {
           if (todo.isDone) {
             return (
-              <Todo
-                todo={todo}
-                key={todo.id}
-                setTodos={setTodos}
-                onDeleteHanlder={onDeleteHanlder}
-                onEditHandler={onEditHandler}
-              />
+              <div className="todo-box" key={todo.id}>
+                <div>
+                <div className="linkbox">
+                      <div className="gage"></div>
+                      <h3 className="detail-link" onClick={()=>{navigate(`/detail/${todo.id}`)}} key={todo.id}>상세보기 &rarr;</h3>
+                    </div>
+                  <h2>{todo.title}</h2>
+                  <div>{todo.body}</div>
+                </div>
+                <div className="button-set">
+                  <button
+                    className="clear-button"
+                    onClick={() => { dispatch(onDeleteHanlder(todo.id)) }}
+                  >
+                    삭제하기
+                  </button>
+                  <button
+                    className="done-button"
+                    onClick={() => { dispatch(onEditHandler(todo.id)) }}
+                  >
+                    {todo.isDone ? "취소" : "완료"}
+                  </button>
+                </div>
+              </div>
             );
           } else {
             return null;
@@ -71,3 +93,4 @@ function List({ todos, setTodos }) {
 }
 
 export default List;
+

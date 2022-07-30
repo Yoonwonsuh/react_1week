@@ -17,7 +17,7 @@ function Header() {
       <Modal show={show} onHide={handleClose}>
       <div className="modalunicorn"><span className='start'>🦄</span></div>
       </Modal>
-      <div onClick={()=>{navigate('/detail')}} className="font-label">React</div>
+      <div onClick={()=>{navigate('/')}} className="font-label">React</div>
     </div>
     
   );

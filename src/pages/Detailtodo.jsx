@@ -1,19 +1,18 @@
 import React from "react";
-import Form from "../components/form/Form";
 import Header from "../components/header/Header";
 import Layout from "../components/layout/Layout";
-import List from "../components/list/List";
+import Detail from "../components/list/Detail";
 
-const TodoList = () => {
+
+const Detailtodo = () => {
   return (
     <Layout>
       <Header />
-      <Form />
-      <List />
+      <Detail />
     </Layout>
   );
 };
 
 
 
-export default TodoList;
+export default Detailtodo;

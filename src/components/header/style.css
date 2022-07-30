@@ -46,8 +46,12 @@ a:hover {
 
 .modalunicorn{
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: 400px;
   height: 400px;
+  margin-left: -200px;
+  margin-top: -200px;
   text-align: center;
   font-size: 280px;
   animation: start 5s;
@@ -58,16 +62,10 @@ a:hover {
 
 @keyframes start {
   from {
-      left: -100%;
+      transform: rotate(0deg)
   }
   to {  
-      left: 100%;
+    transform: rotate(1080deg);
   }
 
-  100% {
-
-      transform: rotate(720deg);
-  }
-  
-  
 }

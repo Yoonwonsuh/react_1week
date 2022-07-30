@@ -1,11 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
+import { addTodo } from "../../redux/modules/Todo";
+import { useDispatch } from "react-redux";
+import shortId from 'shortid';
 import "./style.css";
 
-function Form({ setTodos, todos }) {
+function Form() {
+
+  const dispatch = useDispatch();
+  const shortid = shortId.generate();
+
   const inputRef = useRef();
   useEffect(() =>{
     inputRef.current.focus();
   },[]);
+
+
 
   const initialState = {
     id: 0,
@@ -15,13 +24,13 @@ function Form({ setTodos, todos }) {
   };
 
   const [todo, setTodo] = useState(initialState);
+
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
-    setTodo({ ...todo, [name]: value, id: todos.length + 1 });
+    setTodo({ ...todo, [name]: value, id:shortid});
   };
 
   const onSubmitHandler = (event) => {
-    console.log(todo);
 
     if (todo.title === '') {
       event.preventDefault();
@@ -35,13 +44,14 @@ function Form({ setTodos, todos }) {
 
     else {
       event.preventDefault();
-      setTodos([...todos, todo]);
-      setTodo(initialState);
+      dispatch(addTodo(todo, shortid));
+      setTodo(initialState)
+
+      console.log(todo);
     }
 
 
   };
-  console.log(todo);
 
   return (
     <form onSubmit={onSubmitHandler} className="gray-nav">
