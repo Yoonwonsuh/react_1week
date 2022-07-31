@@ -8,7 +8,6 @@ import { FaChevronRight } from 'react-icons/fa';
 
 
 
-
 const DetailLayout = styled.div`
 display: flex;
 justify-content: space-between;
@@ -27,7 +26,7 @@ font-size: 70px;
 `
 const RightArrow = styled.div`
 position: relative;
-justify-item: center;
+justify-content: center;
 vertical-align: center;
 margin: auto;
 font-size: 70px;
@@ -46,8 +45,7 @@ position: relative;
 
 const IdBox = styled.div`
 display: flex;
-width: 100%
-position: absolute;
+width: 100%;
 font-weight: bold;
 font-size: 40px;
 justify-content: space-between;
@@ -96,6 +94,7 @@ function Detail() {
     const { id } = useParams();
 
     const todo = todos.find((todo) => todo.id == id);
+    
     const todoLength = todos.findIndex((a) => a.id == id);
 
     const leftId = todoLength==0 ? null : todos[todoLength-1].id

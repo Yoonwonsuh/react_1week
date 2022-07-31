@@ -23,9 +23,6 @@ a:visited {
   text-decoration: none;
  }
   
-a:hover {
-  
- }
 
  .unicorn{
   font-size: 40px;
@@ -54,17 +51,31 @@ a:hover {
   margin-top: -200px;
   text-align: center;
   font-size: 280px;
-  animation: start 5s;
+  animation-name: start;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 
 
 
-
 @keyframes start {
-  from {
+  0% {
+      left:0%;
       transform: rotate(0deg)
   }
-  to {  
+
+  25%{
+    top:0%;
+  }
+
+  75%{
+    top:100%;
+  }
+
+  100% {  
+    left:100%;
     transform: rotate(1080deg);
   }
 

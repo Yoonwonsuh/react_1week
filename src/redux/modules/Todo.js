@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit'
 let todos = createSlice({
     name: 'todos',
     initialState: [
-
         {
             id: 1,
             title: "리덕스 공부하기",
@@ -39,7 +38,6 @@ let todos = createSlice({
                 else {
                     return state
                 }
-
             }
             )
         },
@@ -50,5 +48,5 @@ let todos = createSlice({
     
 })
 
-export let { addTodo, onDeleteHanlder, onEditHandler, findTodo } = todos.actions
+export let { addTodo, onDeleteHanlder, onEditHandler, findTodo, readTodo } = todos.actions
 export default todos.reducer
