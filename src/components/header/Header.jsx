@@ -15,7 +15,7 @@ function Header() {
     <div className="header-nav">
       <div className="font-label">My Todo List<span className="unicorn" onClick={handleShow}>🦄</span></div>
       <Modal show={show} onHide={handleClose}>
-      <div className="modalunicorn"><span className='start'>🦄</span></div>
+      <div className="modalunicorn"><span className='start'>🦄gg</span></div>
       </Modal>
       <div onClick={()=>{navigate('/')}} className="font-label">React</div>
     </div>
