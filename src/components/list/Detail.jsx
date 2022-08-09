@@ -94,6 +94,7 @@ function Detail() {
     const { id } = useParams();
 
     const todo = todos.find((todo) => todo.id == id);
+    console.log(todo);
     
     const todoLength = todos.findIndex((a) => a.id == id);
 

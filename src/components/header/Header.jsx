@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import Modal from 'react-bootstrap/Modal';
 import {useNavigate} from "react-router-dom";
 import "./style.css";
