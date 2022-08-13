@@ -18,7 +18,7 @@ let todos = createSlice({
         {
             id: 3,
             title: "9시에 쫑파티",
-            body: "전까지 리덕스좀 해봅시다.",
+            body: "전까지 리덕스좀 해봅시gggggg다.",
             isDone: true,
         },
     ],
