@@ -58,7 +58,7 @@ function List() {
         {todos.map((todo) => {
           if (todo.isDone) {
             return (
-              <div className="todo-box" key={todo.id}>
+              <div className="todo-box" key={todo.id}>  
                 <div>
                 <div className="linkbox">
                       <div className="gage"></div>
